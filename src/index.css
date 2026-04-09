@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #D2042D; 
+  --color-brand-black: #000000;
+  --color-brand-white: #FFFFFF;
+  
+  --font-serif: "Playfair Display", serif;
+}
+:root {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D2042D;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a80324; 
+}
