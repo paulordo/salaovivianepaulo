@@ -31,15 +31,35 @@ const Footer: React.FC = () => {
             <div className="flex gap-4">
               <a
                 href="#"
+                target="_blank"
                 className="bg-white p-4 text-black hover:bg-brand-red hover:text-white transition-all shadow-[4px_4px_0_0_#ef4444]"
               >
                 <Instagram size={24} strokeWidth={2.5} />
               </a>
               <a
                 href="#"
+                target="_blank"
                 className="bg-white p-4 text-black hover:bg-brand-red hover:text-white transition-all shadow-[4px_4px_0_0_#ef4444]"
               >
                 <Facebook size={24} strokeWidth={2.5} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@viviansemfiltro1"
+                target="_blank"
+                className="bg-white p-4 text-black hover:bg-brand-red hover:text-white transition-all shadow-[4px_4px_0_0_#ef4444]"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
               </a>
             </div>
           </div>

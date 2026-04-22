@@ -40,7 +40,6 @@ const App: React.FC = () => {
             </Reveal>
 
             <Reveal delay={0.4}>
-
               <p className="text-gray-800 leading-relaxed text-lg md:text-2xl font-medium max-w-2xl mx-auto">
                 Mais do que um corte ou uma cor, queremos que você se sinta em
                 casa. Venha nos visitar em Rolândia!
@@ -72,6 +71,24 @@ const App: React.FC = () => {
                     className="bg-white border-[3px] border-black p-5 text-black hover:bg-brand-red hover:text-white transition-all transform hover:-translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0_0_#000000] hover:shadow-none"
                   >
                     <Facebook size={32} strokeWidth={2.5} />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@viviansemfiltro1"
+                    target="_blank"
+                    className="bg-white border-[3px] border-black p-5 text-black hover:bg-brand-red hover:text-white transition-all transform hover:-translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0_0_#000000] hover:shadow-none"
+                  >
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                    </svg>
                   </a>
                 </div>
               </div>
