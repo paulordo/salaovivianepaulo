@@ -34,53 +34,63 @@ const Services: React.FC = () => {
             <div className="space-y-8">
               <PriceItem
                 title="Corte Masculino"
-                price="R$30"
+                price="R$ 30"
                 desc="Degradê, social ou máquina"
               />
               <PriceItem
-                title="Corte Masculino Navalhado"
-                price="R$35"
-                desc="Degradê com acabamento navalhado"
+                title="Corte Navalhado"
+                price="R$ 35"
+                desc="Acabamento impecável na navalha"
               />
               <PriceItem
                 title="Barba na Navalha"
-                price="R$30"
-                desc="Barba desenhada e bem acabada"
+                price="R$ 30"
+                desc="Barba desenhada e alinhada"
               />
               <PriceItem
                 title="Combo Corte + Barba"
-                price="R$50"
-                desc="Corte alinhado + Barba desenhada e bem acabada"
+                price="R$ 55"
+                desc="Degradê, social ou máquina e barba alinhados"
+              />
+              <PriceItem
+                title="Combo Corte Navalhado + Barba"
+                price="R$ 60"
+                desc="Cabelo com acabamento impecável na navalha e barba alinhados"
+              />
+              <PriceItem
+                title="Pezinho"
+                price="R$ 10"
+                desc="Limpeza do contorno do cabelo"
               />
               <PriceItem
                 title="Sobrancelha"
-                price="R$20"
+                price="R$ 20"
                 desc="Limpeza e alinhamento facial"
               />
               <PriceItem
                 title="Alisamento"
-                price="A partir de R$100"
-                desc="Redução de volume e fios alinhados com brilho"
+                price="A partir de R$ 100"
+                desc="Redução de volume e fios alinhados"
               />
               <PriceItem
                 title="Tintura / Camuflagem"
-                price="R$ 30"
+                price="A partir de R$ 40"
                 desc="Cobertura de fios brancos"
               />
               <PriceItem
+                title="Luzes"
+                price="A partir de R$ 90"
+                desc="Mechas e iluminação masculina"
+              />
+              <PriceItem
                 title="Platinado / Nevou"
-                price="A partir de R$ 80"
-                desc="Descoloração global"
+                price="A partir de R$ 100"
+                desc="Descoloração global estilizada"
               />
               <PriceItem
                 title="Hidratação Masculina"
                 price="R$ 20"
-                desc="Tratamento dos fios com brilho e maciez"
-              />
-              <PriceItem
-                title="Pigmentação da Barba"
-                price="R$ 20"
-                desc="Cobertura de fios brancos"
+                desc="Tratamento para brilho e maciez"
               />
             </div>
           </div>
