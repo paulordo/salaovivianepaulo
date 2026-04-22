@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import whiteLogo from "../assets/whiteLogo.png"
+import whiteLogoBg from "../assets/whiteLogoBg.png"
 
 const Preloader: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ const Preloader: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-4xl md:text-7xl font-sans font-black italic uppercase text-white leading-none"
             >
-              <img src={whiteLogo} alt="whiteLogo" width={250} />
+              <img src={whiteLogoBg} alt="whiteLogoBg" width={250} />
             </motion.h1>
           </div>
 

@@ -5,7 +5,7 @@ const About: React.FC = () => {
   return (
     <section
       id="sobre"
-      className="relative py-16 md:py-32 overflow-hidden bg-white"
+      className="relative py-5   overflow-hidden bg-white"
     >
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -15,7 +15,7 @@ const About: React.FC = () => {
             <img
               src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800"
               className="relative z-10 w-full h-100 md:h-150 object-cover transition-all duration-700 shadow-2xl"
-              alt="Vivian e Paulo em ação"
+              alt="Vivian e Paulo"
             />
           </div>
 
@@ -53,8 +53,8 @@ const About: React.FC = () => {
                 {/* Destaque "Raiz" */}
                 <div className="bg-black p-8 shadow-[8px_8px_0_0_#ef4444]">
                   <p className="italic text-white font-bold text-xl leading-snug">
-                    "Serviço de qualidade, ambiente de família e um preço que
-                    cabe em seu bolso"
+                    Serviço de qualidade, ambiente de família e um preço que
+                    cabe em seu bolso
                   </p>
                 </div>
 

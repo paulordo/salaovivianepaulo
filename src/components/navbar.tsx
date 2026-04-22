@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Instagram, Facebook } from "lucide-react";
-import whiteLogo from '../assets/whiteLogo.png';
+import whiteLogo from "../assets/whiteLogo.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs uppercase tracking-widest font-black text-black hover:text-brand-red transition-colors"
+                className={`text-xs uppercase tracking-widest font-black ${scrolled ? "text-black" : "text-white"}  hover:text-brand-red transition-colors`}
               >
                 {link.name}
               </a>
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
             <a
               href="https://wa.me/5543999670078"
               target="_blank"
-              className="bg-brand-red text-white px-8 py-3 rounded-md text-xs uppercase tracking-tighter font-black hover:bg-black transition-all shadow-lg shadow-brand-red/20"
+              className={`bg-brand-red text-white px-8 py-3 rounded-md text-xs uppercase tracking-tighter font-black hover:bg-black transition-all shadow-lg shadow-brand-red/20`}
             >
               Agendar Agora
             </a>

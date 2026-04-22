@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative w-full h-90vh min-h-600px flex items-center justify-center overflow-hidden border-b-3px border-black"
+      className="relative w-full min-h-600px flex items-center justify-center overflow-hidden border-b-3px border-black"
     >
       <div className="absolute inset-0 z-0">
         <img
@@ -18,10 +18,9 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 lg:bg-black/50" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
+      <div className="relative z-10 mt-2 max-w-7xl mx-auto px-6 w-full text-center">
         <div className="space-y-8 max-w-5xl mx-auto">
-          
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex items-center justify-center gap-3">
             <div className="h-1 w-10 bg-brand-red" />
             <span className="text-white font-black tracking-0.3em text-xs uppercase shadow-sm">
               Desde 2014 em Rolândia
@@ -29,16 +28,12 @@ const Hero: React.FC = () => {
             <div className="h-1 w-10 bg-brand-red" />
           </div>
 
-          <h1 className="text-5xl md:text-8xl lg:text-9xl font-sans font-black text-white leading-0.85 uppercase italic">
-            A sua beleza <br />
-            <span className="text-brand-red not-italic">é a nossa prioridade.</span>
-          </h1>
-
-          <p className="text-white/90 text-xl md:text-2xl font-medium max-w-2xl mx-auto leading-tight bg-black/30 backdrop-blur-sm p-4 border-l-4 border-brand-red">
-            Cuidado e carinho que você merece, com o profissionalismo que você busca.
+          <p className="text-white/90 mt-50 mb-0 text-xl md:text-2xl font-medium max-w-2xl mx-auto leading-tight bg-black/30 backdrop-blur-sm p-4 border-l-4 border-brand-red">
+            Cuidado e carinho que você merece, com o profissionalismo que você
+            busca.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-10">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-10 mb-25">
             <a
               href="https://wa.me/5543999670078"
               target="_blank"
@@ -47,20 +42,13 @@ const Hero: React.FC = () => {
             >
               Agendar no WhatsApp
             </a>
-            
-            <a
-              href="#sobre"
-              className="bg-white text-black border-3px border-black px-12 py-6 font-black text-lg uppercase tracking-tighter transition-all shadow-8px_8px_0_0_#000 hover:shadow-none hover:translate-x-1 hover:translate-y-1"
-            >
-              Conheça nossa história
-            </a>
+
           </div>
         </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2">
-         <span className="text-white text-10px font-black uppercase tracking-0.2em">Scroll</span>
-         <div className="w-3px h-12 bg-brand-red shadow-2px_2px_0_0_#000"></div>
+        <div className="w-3px h-12 bg-brand-red shadow-2px_2px_0_0_#000"></div>
       </div>
     </section>
   );

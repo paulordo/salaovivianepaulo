@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
               <a href="#home" className="relative z-110">
                 <img
                   className="rounded"
-                  src="/src/assets/whiteLogo.png"
-                  alt="whiteLogo"
+                  src="/src/assets/whiteLogoBg.png"
+                  alt="Logo salão Vivian e Paulo"
                   width={150}
                 />
               </a>
