@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
     { name: "Início", href: "#home" },
     { name: "Sobre", href: "#sobre" },
     { name: "Serviços", href: "#servicos" },
-    { name: "Galeria", href: "#galeria" },
+    // { name: "Galeria", href: "#galeria" },
   ];
 
   return (
@@ -99,8 +99,38 @@ const Navbar: React.FC = () => {
 
               <div className="flex justify-between items-center">
                 <div className="flex gap-6">
-                  <Instagram size={28} className="text-black" />
-                  <Facebook size={28} className="text-black" />
+                  <a
+                    href="https://www.instagram.com/salaovivian_paulo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    className="text-black"
+                  >
+                    <Instagram size={28} strokeWidth={2.5} />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/paulo.cezar.oli"
+                    target="_blank"
+                    className="text-black"
+                  >
+                    <Facebook size={28} strokeWidth={2.5} />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@viviansemfiltro1"
+                    target="_blank"
+                    className="text-black"
+                  >
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                    </svg>
+                  </a>
                 </div>
                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">
                   Rolândia — PR
