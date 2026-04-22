@@ -202,20 +202,30 @@ const PriceItem: React.FC<{ title: string; price: string; desc: string }> = ({
   title,
   price,
   desc,
-}) => (
-  <div className="group border-b border-gray-100 pb-4 last:border-0">
-    <div className="flex justify-between items-baseline">
-      <span className="text-lg md:text-xl font-black uppercase tracking-tighter text-black group-hover:text-brand-red transition-colors">
-        {title}
-      </span>
-      <span className="text-lg md:text-xl font-black text-brand-red">
-        {price}
-      </span>
+}) => {
+  const hasPrefix = price.toLowerCase().includes("a partir de");
+  const cleanPrice = price.replace(/a partir de/i, "").trim();
+
+  return (
+    <div className="group border-b border-gray-100 pb-4 last:border-0">
+      <div className="flex justify-between items-baseline gap-4">
+        <span className="text-lg md:text-xl font-black uppercase tracking-tighter text-black group-hover:text-brand-red transition-colors">
+          {title}
+        </span>
+        <span className="text-lg md:text-xl font-black text-brand-red whitespace-nowrap">
+          {hasPrefix && (
+            <span className="text-[10px] md:text-xs font-bold uppercase tracking-normal mr-1 text-gray-500">
+              A partir de
+            </span>
+          )}
+          {cleanPrice}
+        </span>
+      </div>
+      <p className="text-[10px] uppercase font-bold tracking-[0.15em] text-gray-400 mt-1">
+        {desc}
+      </p>
     </div>
-    <p className="text-[10px] uppercase font-bold tracking-[0.15em] text-gray-400 mt-1">
-      {desc}
-    </p>
-  </div>
-);
+  );
+};
 
 export default Services;

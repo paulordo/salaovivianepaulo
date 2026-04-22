@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
                   <span className="text-[10px] uppercase font-black text-gray-500">
                     Seg — Sex
                   </span>
-                  <span className="text-xs font-black">08h - 18h</span>
+                  <span className="text-xs font-black">09h - 18h</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-white/10 pb-2">
                   <span className="text-[10px] uppercase font-black text-gray-500">
