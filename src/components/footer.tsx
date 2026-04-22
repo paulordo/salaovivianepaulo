@@ -1,6 +1,7 @@
 import React from "react";
 import { Instagram, Facebook, MapPin, Phone, ChevronRight } from "lucide-react";
 import { Reveal } from "./reveal";
+import WhiteLogoBg from "../assets/whiteLogoBg.png"
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ const Footer: React.FC = () => {
               <a href="#home" className="relative z-110">
                 <img
                   className="rounded"
-                  src="/src/assets/whiteLogoBg.png"
+                  src={WhiteLogoBg}
                   alt="Logo salão Vivian e Paulo"
                   width={150}
                 />
@@ -30,14 +31,14 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/salaovivian_paulo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 className="bg-white p-4 text-black hover:bg-brand-red hover:text-white transition-all shadow-[4px_4px_0_0_#ef4444]"
               >
                 <Instagram size={24} strokeWidth={2.5} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/paulo.cezar.oli"
                 target="_blank"
                 className="bg-white p-4 text-black hover:bg-brand-red hover:text-white transition-all shadow-[4px_4px_0_0_#ef4444]"
               >
@@ -93,26 +94,44 @@ const Footer: React.FC = () => {
             <h4 className="text-brand-red uppercase tracking-[0.2em] text-xs font-black mb-8">
               Onde Estamos
             </h4>
+
+            {/* MAPA INTERATIVO */}
+            <div className="w-full h-48 mb-6 border-2 border-black shadow-[4px_4px_0_0_#000000] overflow-hidden">
+              <iframe
+                title="Localização Salão Vivian e Paulo"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.717144675685!2d-51.3837884!3d-23.3167493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb27d52b66db9f%3A0x9def218d1427cc76!2sSal%C3%A3o%20Vivian%20e%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1714000000000!5m2!1spt-BR!2sbr"
+              ></iframe>
+            </div>
+
             <ul className="space-y-6 text-sm font-bold">
-              <li className="flex flex-col items-center md:items-start gap-3 mb-12">
+              <li className="flex flex-col items-center md:items-start gap-3 mb-6">
                 <MapPin size={24} className="text-brand-red" />
                 <a
-                  href="#"
+                  href="https://www.google.com/maps/dir/?api=1&destination=Salão+Vivian+e+Paulo+Rolândia"
                   target="_blank"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors leading-relaxed"
                 >
-                  Rua Tópazio, 865 - Vila Oliveira <br />
+                  Rua Topázio, 865 - Vila Oliveira <br />
                   Rolândia - PR
                 </a>
               </li>
               <li className="flex flex-col items-center md:items-start gap-3">
                 <Phone size={24} className="text-brand-red" />
-                <span className="text-2xl font-black text-white">
-                  (43) 98821-9099
-                </span>
-                <span className="text-2xl font-black text-white">
-                  (43) 99967-0078
-                </span>
+                <div className="flex flex-col gap-1">
+                  <span className="text-2xl font-black text-white">
+                    (43) 98821-9099
+                  </span>
+                  <span className="text-2xl font-black text-white">
+                    (43) 99967-0078
+                  </span>
+                </div>
               </li>
             </ul>
           </div>
