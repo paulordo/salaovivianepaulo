@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/navbar";
 import Services from "./components/services";
 import Footer from "./components/footer";
@@ -11,11 +11,20 @@ import { Reveal } from "./components/reveal";
 import whiteLogo from "./assets/whiteLogo.png";
 
 const App: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-white selection:bg-brand-red selection:text-white overflow-x-hidden">
       <Preloader />
 
-      <Navbar />
+      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} scrolled={scrolled} />
 
       <main>
         <Hero />
@@ -98,17 +107,19 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-      <a
-        href="https://wa.me/5543999670078"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-[#25D366] border-[3px] border-black p-4 md:p-5 shadow-[6px_6px_0_0_#000000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-200 z-99 group flex items-center gap-3 md:mb-10"
-      >
-        <MessageCircle color="black" size={30} strokeWidth={2.5} />
-        <span className="text-black font-black uppercase text-xs tracking-tighter hidden md:block">
-          Agende seu horário
-        </span>
-      </a>
+      {scrolled && (
+        <a
+          href="https://wa.me/5543999670078"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 bg-[#25D366] border-[3px] border-black p-4 md:p-5 shadow-[6px_6px_0_0_#000000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-200 z-99 group flex items-center gap-3 md:mb-10"
+        >
+          <MessageCircle color="black" size={30} strokeWidth={2.5} />
+          <span className="text-black font-black uppercase text-xs tracking-tighter hidden md:block">
+            Agende seu horário
+          </span>
+        </a>
+      )}
     </div>
   );
 };

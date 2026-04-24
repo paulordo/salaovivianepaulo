@@ -1,5 +1,7 @@
 import React from "react";
 import storefront from "../assets/images/storefront.webp";
+import Icon from "@mdi/react";
+import { mdiAccountGroup, mdiAccount } from "@mdi/js";
 
 const Hero: React.FC = () => {
   return (
@@ -38,9 +40,25 @@ const Hero: React.FC = () => {
               href="https://wa.me/5543999670078"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-red text-white border-3px border-black px-12 py-6 font-black text-lg uppercase tracking-tighter transition-all shadow-8px_8px_0_0_#000 hover:shadow-none hover:translate-x-1 hover:translate-y-1 active:shadow-none"
+              className="bg-[#25D366] text-white px-6 py-3 rounded-md font-bold uppercase hover:bg-black transition"
             >
-              Agendar no WhatsApp
+              <div className="flex justify-between gap-2">
+                Agendar no WhatsApp
+                <Icon path={mdiAccount} size={1} />
+              </div>
+            </a>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+            <a
+              href="https://chat.whatsapp.com/KDDlGV3BEd19wHC9yjoPBL?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-red text-white px-6 py-3 rounded-md font-bold uppercase hover:bg-black transition"
+            >
+              <div className="flex justify-between gap-2">
+                Grupo de produtos
+                <Icon path={mdiAccountGroup} size={1} />
+              </div>
             </a>
           </div>
         </div>

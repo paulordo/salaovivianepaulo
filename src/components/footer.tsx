@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               Navegação
             </h4>
             <ul className="space-y-4 text-sm font-black uppercase tracking-tighter">
-              {["Início", "Sobre", "Serviços", "Galeria"].map((item) => (
+              {["Início", "Sobre", "Serviços", ].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}

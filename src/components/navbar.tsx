@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Instagram, Facebook } from "lucide-react";
 import whiteLogo from "../assets/whiteLogo.png";
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+interface NavbarProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  scrolled: boolean;
+}
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+const Navbar: React.FC<NavbarProps> = (props) => {
+  const { isOpen, scrolled, setIsOpen } = props;
 
   const navLinks = [
     { name: "Início", href: "#home" },
