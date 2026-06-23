@@ -9,6 +9,7 @@ import Hero from "./components/hero";
 import Preloader from "./components/preloader";
 import { Reveal } from "./components/reveal";
 import whiteLogo from "./assets/whiteLogo.png";
+import { Analytics } from "@vercel/analytics/next";
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -50,8 +51,8 @@ const App: React.FC = () => {
 
             <Reveal delay={0.4}>
               <p className="text-gray-800 leading-relaxed text-lg md:text-2xl font-medium max-w-2xl mx-auto">
-                Mais do que um corte, uma cor ou um procedimento, queremos que você se sinta em
-                casa. Venha nos visitar em Rolândia!
+                Mais do que um corte, uma cor ou um procedimento, queremos que
+                você se sinta em casa. Venha nos visitar em Rolândia!
               </p>
             </Reveal>
 
@@ -120,6 +121,7 @@ const App: React.FC = () => {
           </span>
         </a>
       )}
+      <Analytics />
     </div>
   );
 };
