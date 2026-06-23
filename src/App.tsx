@@ -9,7 +9,7 @@ import Hero from "./components/hero";
 import Preloader from "./components/preloader";
 import { Reveal } from "./components/reveal";
 import whiteLogo from "./assets/whiteLogo.png";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
