@@ -13,9 +13,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   const { isOpen, scrolled, setIsOpen } = props;
 
   const navLinks = [
-    { name: "Início", href: "#home" },
+    { name: "Início", href: "#início" },
     { name: "Sobre", href: "#sobre" },
-    { name: "Serviços", href: "#servicos" },
+    { name: "Parcerias", href: "#parcerias" },
+    { name: "Serviços", href: "#serviços" },
     // { name: "Galeria", href: "#galeria" },
   ];
 
@@ -29,8 +30,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+          <div className="absolute inset-0 bg-white/20 blur-xl scale-150 -z-10" />
+
           {/* LOGO */}
-          <a href="#home" className="relative z-110">
+          <a href="#início" className="relative z-110">
             <img src={whiteLogo} alt="whiteLogo" width={150} />
           </a>
 
@@ -40,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-xs uppercase tracking-widest font-black ${scrolled ? "text-black" : "text-white"}  hover:text-brand-red transition-colors`}
+                className={`text-xs uppercase tracking-widest font-black ${scrolled ? "text-black" : "text-white [text-shadow:0_2px_3px_rgba(0,0,0,0.80)]"}  hover:text-brand-red transition-colors`}
               >
                 {link.name}
               </a>
@@ -99,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               <div className="flex justify-between items-center">
                 <div className="flex gap-6">
                   <a
-                    href="https://www.instagram.com/salaovivian_paulo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    href="https://www.instagram.com/vvivianpaulo/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
                     className="text-black"
                   >
@@ -113,7 +116,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                     <Facebook size={28} strokeWidth={2.5} />
                   </a>
                   <a
-                    href="https://www.tiktok.com/@viviansemfiltro1"
+                    href="https://www.tiktok.com/@vivianepaulo22"
                     target="_blank"
                     className="text-black"
                   >

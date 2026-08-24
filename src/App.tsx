@@ -10,6 +10,7 @@ import Preloader from "./components/preloader";
 import { Reveal } from "./components/reveal";
 import whiteLogo from "./assets/whiteLogo.png";
 import { Analytics } from "@vercel/analytics/react";
+import Ugc from "./components/ugc";
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -30,7 +31,9 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <About />
+        <Ugc />
         <Services />
+
         {/* <Gallery /> */}
 
         <section className="py-24 md:py-40 px-6 max-w-7xl mx-auto text-center border-t-[3px] border-black">
@@ -69,7 +72,7 @@ const App: React.FC = () => {
                 <div className="flex justify-center gap-6">
                   {/* Botões sociais */}
                   <a
-                    href="https://www.instagram.com/salaovivian_paulo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    href="https://www.instagram.com/vvivianpaulo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
                     className="bg-white border-[3px] border-black p-5 text-black hover:bg-brand-red hover:text-white transition-all transform hover:-translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0_0_#000000] hover:shadow-none"
                   >
@@ -83,7 +86,7 @@ const App: React.FC = () => {
                     <Facebook size={32} strokeWidth={2.5} />
                   </a>
                   <a
-                    href="https://www.tiktok.com/@viviansemfiltro1"
+                    href="https://www.tiktok.com/@vivianepaulo22"
                     target="_blank"
                     className="bg-white border-[3px] border-black p-5 text-black hover:bg-brand-red hover:text-white transition-all transform hover:-translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0_0_#000000] hover:shadow-none"
                   >

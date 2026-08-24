@@ -4,7 +4,7 @@ import { Reveal } from "./reveal";
 
 const Services: React.FC = () => {
   return (
-    <section id="servicos" className="py-16 md:py-32 bg-white text-black px-6">
+    <section id="serviços" className="py-16 md:py-32 bg-white text-black px-6">
       <div className="max-w-7xl mx-auto">
         {/* Título */}
         <div className="text-center mb-16 md:mb-24">

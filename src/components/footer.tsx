@@ -1,7 +1,7 @@
 import React from "react";
 import { Instagram, Facebook, MapPin, Phone, ChevronRight } from "lucide-react";
 import { Reveal } from "./reveal";
-import WhiteLogoBg from "../assets/whiteLogoBg.png"
+import WhiteLogoBg from "../assets/whiteLogoBg.png";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         <Reveal delay={0.1}>
           <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-3xl font-black tracking-tighter text-white uppercase italic leading-none">
-              <a href="#home" className="relative z-110">
+              <a href="#início" className="relative z-110">
                 <img
                   className="rounded"
                   src={WhiteLogoBg}
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/salaovivian_paulo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                href="https://www.instagram.com/vvivianpaulo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 className="bg-white p-4 text-black hover:bg-brand-red hover:text-white transition-all shadow-[4px_4px_0_0_#ef4444]"
               >
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 <Facebook size={24} strokeWidth={2.5} />
               </a>
               <a
-                href="https://www.tiktok.com/@viviansemfiltro1"
+                href="https://www.tiktok.com/@vivianepaulo22"
                 target="_blank"
                 className="bg-white p-4 text-black hover:bg-brand-red hover:text-white transition-all shadow-[4px_4px_0_0_#ef4444]"
               >
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               Navegação
             </h4>
             <ul className="space-y-4 text-sm font-black uppercase tracking-tighter">
-              {["Início", "Sobre", "Serviços", ].map((item) => (
+              {["início", "sobre", "parcerias", "serviços"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
