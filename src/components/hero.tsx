@@ -19,16 +19,16 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 lg:bg-black/50" />
       </div>
 
-      <div className="relative z-10 w-full h-screen flex flex-col items-center justify-center px-6">
-        <div className="space-y-8 max-w-5xl mx-auto flex flex-col items-center">
-          <div className="flex items-center justify-center gap-3">
-            <div className="h-1 w-10 bg-brand-red" />
-            <span className="text-white font-black tracking-0.3em text-xs uppercase shadow-sm">
-              Desde 2014 em Rolândia
-            </span>
-            <div className="h-1 w-10 bg-brand-red" />
-          </div>
+      <div className="relative z-10 w-full h-screen flex flex-col items-center justify-center pt-16 px-6">
+        <div className="flex items-center justify-center gap-3">
+          <div className="h-1 w-10 bg-brand-red" />
+          <span className="text-white font-black tracking-0.3em text-xs uppercase shadow-sm">
+            Desde 2014 em Rolândia
+          </span>
 
+          <div className="h-1 w-10 bg-brand-red" />
+        </div>
+        <div className="space-y-2 max-w-5xl mx-auto flex flex-col items-center">
           <p className="text-white/90 text-xl md:text-2xl font-medium max-w-2xl mx-auto leading-tight bg-black/30 backdrop-blur-sm p-4 border-l-4 border-brand-red text-center">
             Cuidado e carinho que você merece, com o profissionalismo que você
             busca.
