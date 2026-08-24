@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 w-full h-screen flex flex-col items-center justify-center pt-16 px-6">
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-3 pb-3">
           <div className="h-1 w-10 bg-brand-red" />
           <span className="text-white font-black tracking-0.3em text-xs uppercase shadow-sm">
             Desde 2014 em Rolândia
