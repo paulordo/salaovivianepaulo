@@ -1,7 +1,5 @@
 import React from "react";
 import storefront from "../assets/images/storefront.webp";
-import Icon from "@mdi/react";
-import { mdiAccountGroup, mdiAccount } from "@mdi/js";
 import { Instagram, MessageCircle, Users, ArrowUpRight } from "lucide-react";
 
 const Hero: React.FC = () => {
