@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-red: #D2042D; 
+  --color-brand-red: #d2042d;
   --color-brand-black: #000000;
-  --color-brand-white: #FFFFFF;
-  
+  --color-brand-white: #ffffff;
+
+  --font-sans: "Montserrat", sans-serif;
   --font-serif: "Playfair Display", serif;
 }
+
 :root {
   background-color: #ffffff;
   color: #1a1a1a;
@@ -17,14 +19,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000; 
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D2042D;
+  background: #d2042d;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a80324; 
+  background: #a80324;
 }
