@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 lg:bg-black/50" />
       </div>
 
-      <div className="relative z-10 w-full h-screen flex flex-col items-center justify-center pt-16 px-6">
+      <div className="  relative z-10 w-full  min-h-screen  flex flex-col items-center justify-center  px-6  pt-26 pb-10  md:pt-12 md:pb-12">
         <div className="flex items-center justify-center gap-3 pb-3">
           <div className="h-1 w-10 bg-brand-red" />
           <span className="text-white font-black tracking-0.3em text-xs uppercase shadow-sm">
