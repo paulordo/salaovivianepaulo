@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
                     Agendar no WhatsApp
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.15em] text-white/70 group-hover:text-black/50 transition-colors duration-300">
-                    Hórarios Disponíveis
+                    Horários Disponíveis
                   </span>
                 </div>
               </div>

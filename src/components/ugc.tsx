@@ -9,21 +9,17 @@ import {
 } from "lucide-react";
 import { Reveal } from "./reveal";
 
-import video1 from "../assets/videos/video1.mp4";
-import video2 from "../assets/videos/video2.mp4";
-import video3 from "../assets/videos/video3.mp4";
-
 const videos = [
   {
-    src: video1,
+    src: "/videos/video1.mp4",
     title: "Aplicação e textura",
   },
   {
-    src: video2,
+    src: "/videos/video2.mp4",
     title: "Demonstração do produto",
   },
   {
-    src: video3,
+    src: "/videos/video3.mp4",
     title: "Conteúdo para Reels e TikTok",
   },
 ];
@@ -50,7 +46,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
   const [progress, setProgress] = useState(0);
   const [showControls, setShowControls] = useState(false);
 
-  const handlePlay = () => {
+  const handlePlay = async () => {
     const video = videoRef.current;
 
     if (!video) return;
@@ -62,8 +58,14 @@ const VideoCard: React.FC<VideoCardProps> = ({
     }
 
     onPlay(index);
-    video.play();
-    setIsPlaying(true);
+
+    try {
+      await video.play();
+      setIsPlaying(true);
+    } catch (error) {
+      console.error("Não foi possível reproduzir o vídeo:", error);
+      setIsPlaying(false);
+    }
   };
 
   React.useEffect(() => {
@@ -85,9 +87,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
     setProgress((video.currentTime / video.duration) * 100);
   };
 
-  const handleProgressClick = (
-    event: React.MouseEvent<HTMLDivElement>
-  ) => {
+  const handleProgressClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const video = videoRef.current;
 
     if (!video || !video.duration) return;
@@ -124,9 +124,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >
-      <div
-        className="relative overflow-hidden bg-black border-[3px] border-black shadow-[8px_8px_0_0_#000000] transition-all duration-300 md:group-hover:-translate-x-1 md:group-hover:-translate-y-1 md:group-hover:shadow-[12px_12px_0_0_#000000]"
-      >
+      <div className="relative overflow-hidden bg-black border-[3px] border-black shadow-[8px_8px_0_0_#000000] transition-all duration-300 md:group-hover:-translate-x-1 md:group-hover:-translate-y-1 md:group-hover:shadow-[12px_12px_0_0_#000000]">
         {/* CONTAINER RESPONSIVO 9:16 */}
         <div className="relative aspect-9/16 w-full bg-neutral-950 overflow-hidden">
           <video
@@ -143,7 +141,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
           </video>
 
           {/* GRADIENTE */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/10" />
 
           {/* BOTÃO PLAY CENTRAL */}
           <button
@@ -169,17 +167,9 @@ const VideoCard: React.FC<VideoCardProps> = ({
             `}
           >
             {isPlaying ? (
-              <Pause
-                size={28}
-                fill="currentColor"
-                className="ml-1px"
-              />
+              <Pause size={28} fill="currentColor" className="ml-1px" />
             ) : (
-              <Play
-                size={30}
-                fill="currentColor"
-                className="ml-1"
-              />
+              <Play size={30} fill="currentColor" className="ml-1" />
             )}
           </button>
 
@@ -228,11 +218,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
                   aria-label={isMuted ? "Ativar som" : "Desativar som"}
                   className="text-white hover:text-brand-red transition-colors"
                 >
-                  {isMuted ? (
-                    <VolumeX size={21} />
-                  ) : (
-                    <Volume2 size={21} />
-                  )}
+                  {isMuted ? <VolumeX size={21} /> : <Volume2 size={21} />}
                 </button>
 
                 <button
@@ -287,17 +273,15 @@ const Ugc: React.FC = () => {
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black uppercase leading-[0.95]">
               Demonstração de Conteúdo
               <br />
-              <span className="text-brand-red">
-                UGC & Vídeos de Produtos
-              </span>
+              <span className="text-brand-red">UGC & Vídeos de Produtos</span>
             </h2>
           </Reveal>
 
           <Reveal delay={0.2}>
             <p className="mt-7 sm:mt-8 text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               Confira alguns exemplos de gravações e edições focadas em
-              aplicação de produtos, textura, estética e resultados reais para
-              o público. Vídeos prontos para uso em anúncios, Reels e TikTok.
+              aplicação de produtos, textura, estética e resultados reais para o
+              público. Vídeos prontos para uso em anúncios, Reels e TikTok.
             </p>
           </Reveal>
         </div>
