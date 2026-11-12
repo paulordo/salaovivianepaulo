@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
               </a>
             </h3>
             <p className="text-gray-400 text-sm font-medium leading-relaxed max-w-xs">
-              Cuidando do visual em Rolândia há mais de 10 anos. Qualidade,
+              Cuidando do visual em Rolândia há mais de 15 anos. Qualidade,
               preço justo e o respeito que você merece.
             </p>
             <div className="flex gap-4">
