@@ -139,7 +139,7 @@ const Hero: React.FC = () => {
               rel="noopener noreferrer"
               className=" group w-full flex items-center justify-between px-5 py-4 bg-black/35 backdrop-blur-md border border-white/30 text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
             >
-              <div className="flex items-center gap-6 ml-2">
+              <div className="flex items-center gap-4 ml-2">
                 <span className="text-lg leading-none">♪</span>
                 <div className="flex flex-col min-w-0">
                   <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.15em]">
